@@ -2,7 +2,7 @@ import mongoose, { CallbackError, ConnectOptions } from "mongoose";
 import log from "../../../logger";
 
 function connect() {
-    const uri = 'mongodb+srv://kritikaly:thefiend!@userdb-diaxe.mongodb.net/userDB?retryWrites=true';
+    const uri = 'localhost:27017;
     const options: ConnectOptions = {
         autoIndex: false,
         connectTimeoutMS: 10000, // Give up initial connection after 10 seconds
