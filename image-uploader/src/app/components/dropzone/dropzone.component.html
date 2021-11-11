@@ -1,0 +1,35 @@
+<div>
+  <div *ngIf="error">
+      {{ error }}
+  </div>
+    <!-- <div *ngIf="uploadResponse.status === 'error'">
+        {{ uploadResponse.message }}
+    </div> -->
+  <div class="progress" *ngIf="uploadResponse.status === 'progress'">
+  
+  
+    <div *ngIf="uploadResponse.message < 100" class="indeterminate" role="progressbar" [style.width.%]="uploadResponse.message" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
+    <!-- Done! -->
+    </div>
+  
+  </div>
+    
+  <div [class.hovering]="isHovering" class="dropzone" appDropzone (filesHovered)="toggleHover($event)" (filesDroppedOff)="handleFileInput($event)" (textDropped)="handleTextInput($event)">
+  
+    <h3>Drop Zone!</h3>
+  
+    <div class="file">
+      <label class="file-label">
+        <input class="file-input" type="file" id="file">
+        <span class="file-cta">
+          <span class="file-icon">
+            <i class="fa fa-upload"></i>
+          </span>
+          <span class="file-label">
+            or choose a file…
+          </span>
+        </span>
+      </label>
+    </div>
+  </div>
+</div>
