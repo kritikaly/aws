@@ -1,8 +1,6 @@
 const mongoose = require('mongoose');
 
 const url = 'mongodb://localhost/tacobell';
-const url2 = 'mongodb+srv://kritikaly:thefiend!@userdb-diaxe.mongodb.net/userDB?retryWrites=true';
-const url3 = 'mongodb+srv://wbt-dev20:6nPvvtL8wpBF0F3a@cluster0.uliob.mongodb.net/tacobell?retryWrites=true&w=majority';
 
 const options = {
   useNewUrlParser: true,
